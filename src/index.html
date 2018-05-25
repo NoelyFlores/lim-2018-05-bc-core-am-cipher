@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +7,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <div>
+         <h3>Cipher</h3><h2>Mesagge</h2>
+      </div>    
+              
+        <ul>
+            <li><span></span>HOME</li>
+            <li><span></span>CIFRAR</li>
+            <li><span></span>DESCIFRAR</li>
+            <li><span></span>LOGIN</li>
+            <li></li>
+        </ul> 
+    </nav>
+    <section>
+      <div id='messageCipher' class="divMessage">
+        <form>
+          <h4>Cifrar mensaje</h4>
+          <div class="contain-valor">
+            <label id="warnnig">ERROR!! Introduce un numero o el mensage</label>
+            <input type="text" name="" id="offsetNumber" placeholder="INGRESE NUMERO"><br>
+            <textarea id='cipherText' placeholder="ESCRIABA EL MENSAGE"></textarea>
+          </div>
+          <div class="contain-button">
+            <input type="button" name="" id="buttonCipherText" class="button-acess" value="CIFRAR" >
+          </div>
+          
+      </form>
+      </div>
+      <div id='messageDes' class="divMessage">
+        <form>
+          <h4>Desifrar mensaje</h4>
+          <div class="contain-valor">
+            <label id="warnnig2">ERROR!! Introduce un numero o el mensage</label>
+            <input type="text" name="" id="offsetClave" placeholder="INGRESE CLAVE"><br>
+            <p id='cipherMessage' class="cipherMessage" placeholder="MENSAJE"></p>
+          </div>
+          <div class="contain-button">
+            <input type="button" name="" id="buttonDecipherText" class="button-acess" value="DESCIFRAR">
+            <input type="submit" value="LISTO">
+          </div>
+          </form>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>© Diseñado por <a target="_blank" href="https://es-la.facebook.com/">Noely Flores</a> </p>
+        <p>Laboratoria</p>
+      </div>
+
+    </footer>
+    
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
