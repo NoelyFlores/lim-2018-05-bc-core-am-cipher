@@ -23,4 +23,4 @@ con una interfaz agradable y facil uso
 * Listo!!
 
 
-Cualquier duda buscame [Slack](https://claseslaboratoria.slack.com/messages/DAP4TS69F/) 
+Cualquier duda buscame por [Slack](https://claseslaboratoria.slack.com/messages/DAP4TS69F/) 
