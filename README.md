@@ -18,7 +18,7 @@ con una interfaz agradable y facil uso
 * Escribir el mensaje no mas de 150 palabras por accion
 * Hacer clic en el boton cifrar
 ### Descifrar
-*Ingresa el numero clave con el que cifraste
+* Ingresa el numero clave con el que cifraste
 * Hacer clic en el boton descrifrar
 * Listo!!
 
