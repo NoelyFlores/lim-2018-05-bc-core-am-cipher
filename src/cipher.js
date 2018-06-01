@@ -1,32 +1,29 @@
 window.cipher = {
-	encode: (offset, string)=>{//debugger
-		const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-		let displacement=parseInt(offset);// Conflictos!!! parsear
-		let upperString=string.toUpperCase();
-		let resultEncryption="";//inicializando mi variable que ALMACENARA mi cifrado
-		let positionEncryption;
-		for (let i = 0; i <=string.length ; i++) {//recorrere por la cantidad de argumentos en mi mensaje	
-			if (!isNaN(upperString[i])) {// quiero determinar si el argumento es un numero o no! (NaN->true,12->false) NO ES UN NUMERO???
-				resultEncryption+=upperString[i];
+	encode: (offset, string)=>{
+		return cipher.hibrido(offset,string,true);
+		}, 
+	decode: (offset, string)=>{	
+		return cipher.hibrido(offset,string,false);
+		},
+	createCipherWithOffset: (offset)=>{
+		var WihtOffset={
+			encode: (string)=>{
+				return cipher.hibrido(offset,string,true);
+			},
+			decode: (string)=>{
+				return cipher.hibrido(offset,string,false);
 			}
-			if(upperString[i]==" "){// Si mi letra es un espacio en blanco?
-				resultEncryption+="";
-			}
-			for(let q=0; q<=alphabet.length-1;q++){// Digamos sin cifrar es 27
-				if(upperString[i]==alphabet[q]){// comparo cada argumento de mi mensaje con el Array abecedario
-					positionEncryption=(q+displacement)%alphabet.length;
-					resultEncryption+=alphabet[positionEncryption];
-					}						
-				}
 		}
-		return resultEncryption.toString(); 
-	}, 
-	decode: (offset, string)=>{//debugger
+		return WihtOffset;
+		},
+
+	hibrido: (offSet,string,boolean)=>{
 		const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-		let displacement=parseInt(offset);
+		let displacement=parseInt(offSet);
 		let upperString=string.toUpperCase();
 		let resultEncryption="";
 		let positionEncryption;
+		let positionEncryption2;
 		for (let i = 0; i <=string.length ; i++) {
 			if (!isNaN(upperString[i])) {
 				resultEncryption+=upperString[i];
@@ -36,18 +33,20 @@ window.cipher = {
 			}
 			for(let q=0; q<=alphabet.length-1;q++){									
 				if(upperString[i]==alphabet[q]){
-					positionEncryption=(q-displacement)%alphabet.length;
-					if(positionEncryption<0){// si mi posicion es negativo sumarlo la cantidad del array
-						resultEncryption+=alphabet[positionEncryption+alphabet.length];
-					}else{
+					if(boolean==true){
+						positionEncryption=(q+displacement)%alphabet.length;
 						resultEncryption+=alphabet[positionEncryption];
+					}else{
+						positionEncryption2=(q-displacement)%alphabet.length;
+						if(positionEncryption2<0){
+							resultEncryption+=alphabet[positionEncryption2+alphabet.length];
+						}else{
+							resultEncryption+=alphabet[positionEncryption2];
+						}
 					}
 				}
 			}
 		}
 		return resultEncryption.toString(); 
 	}
-	/*createCipherWithOffset: (offset)=>{
-
-	}*/
 };
