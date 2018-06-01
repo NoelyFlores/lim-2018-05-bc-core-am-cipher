@@ -1,11 +1,11 @@
 window.onload=function() {
-	var offsetNumber=document.getElementById("offsetNumber");
-	var textMessage=document.getElementById("cipherText");
-	var offsetClave=document.getElementById("offsetClave");
+	let offsetNumber=document.getElementById("offsetNumber");
+	let textMessage=document.getElementById("cipherText");
+	let offsetClave=document.getElementById("offsetClave");
 
-	var menuHome=document.getElementById("home");
-	var menuCipher=document.getElementById("divCipher");
-	var menuDescipher=document.getElementById("divDescipher");
+	let menuHome=document.getElementById("home");
+	let menuCipher=document.getElementById("divCipher");
+	let menuDescipher=document.getElementById("divDescipher");
 	// 	ENCRIPTAR
 
 	document.getElementById("buttonCipherText").addEventListener("click",()=>{//debugger

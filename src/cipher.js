@@ -6,7 +6,7 @@ window.cipher = {
 		return cipher.hibrido(offset,string,false);
 		},
 	createCipherWithOffset: (offset)=>{
-		var WihtOffset={
+		let WihtOffset={
 			encode: (string)=>{
 				return cipher.hibrido(offset,string,true);
 			},
