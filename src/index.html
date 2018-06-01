@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Ceasar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <div>
+         <h3>WE</h3><h2>Talk</h2>
+      </div>    
+              
+        <ul>
+            <li id="menuHome"><span></span>HOME</li>
+            <li id="menuCifrar"><span></span>CIFRAR</li>
+            <li id="menuDescifrar"><span></span>DESCIFRAR</li>
+            <li></li>
+        </ul> 
+    </nav>
+    <section>
+      <div class="home" id="home">
+
+        <div>
+          
+            <h3>Cifrar Mensaje</h3>
+            <p>Despreocupate por recibir esos mensaje que no quieres que nadie lo lea mas que TU! 
+              Proteje tu privacidad e invierte ese tiempo en lo que realmente importa.</p>
+            <label class="we">WE</label><label class="talk">Talk</label>
+            </div>
+          </div>
+      <div id="divCipher" class="divMessage">
+        <form>
+          <h4>Cifrar Mensaje</h4>
+          <div class="contain-valor">
+            <img src="https://cdn1.mindmeister.com/assets/meisterlabs/avatars/default_avatar-b43bffa1218b399de437d643f24d91b05a8e8010e0d7e4fd84ec65aaf4fada26.svg">
+            <label id="warning">ERROR! No existe clave o mensaje</label>
+            <input type="text" name="" id="offsetNumber" placeholder="INGRESE NUMERO CLAVE"><br>
+            <textarea id="cipherText" placeholder="ESCRIBA EL MENSAJE"></textarea>
+          </div>
+          <div class="contain-button">
+            <input type="button" name="" id="buttonCipherText" class="button-acess" value="CIFRAR" >
+          </div>
+          
+      </form>
+      </div>
+      <div id="divDescipher" class="divMessage">
+        <form>
+          <h4>Descifrar Mensaje</h4>
+          <div class="contain-valor">
+            <p class="aviso">Para descifrar el mensaje tendrás que compartir la misma clave del cidrado</p>
+            <label id="warning2">ERROR!! Clave vacía o incorrecta</label>
+            <input type="text" id="offsetClave" placeholder="INGRESE CLAVE"><br>
+            <p id="cipherMessage" class="cipherMessage" placeholder="MENSAJE"></p>
+          </div>
+          <div class="contain-button">
+            <input type="button" name="" id="buttonDecipherText" class="button-acess" value="DESCIFRAR">
+            <input type="submit" value="LISTO" class="button-acess" style="background:#EC0044; border-color:#EC0044">
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>© Diseñado por <a target="_blank" href="https://es-la.facebook.com/">Noely Flores </a>- Laboratoria! </p>
+      </div>
+
+    </footer>
+    
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

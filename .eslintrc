@@ -10,6 +10,6 @@
   "extends": "eslint:recommended",
   "globals": {
     "assert": false,
-    "cipher": false,
+    "cipher": false
     }
 }
