@@ -1,46 +1,94 @@
 *{
-	margin: 0px;	
-	font-family: 'Roboto', sans-serif;
-}
+    margin: 0px;    
+    font-family: 'Roboto', sans-serif;
+  }
+/*.......................MENU.................*/
 nav{
-	width: 100%;
-	background: #000;
-	color: #fff;
-	padding: 2em 0em 3em 0em;
-	font-family: 'Roboto', sans-serif;
-	display: block;
-}
+    width: 100%;
+    padding: 2em 0em 3em 0em;
+    color: #fff;
+    background: #000;
+
+    }
 nav div{
-	float: left;
-	margin-left: 10%;
+    float: left;
+    margin-left: 10%;
 }
 nav h2, h3{
-	float: left;
+    float: left;
 }
 nav h3{
  color: #44D7A8;
 }
 nav ul{
-	margin-right: 3%;
-	float: right !important;
+    margin-right: 3%;
+    float: right !important;
 }
 nav ul li{
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin: 0em 1em;
-	float: left;
-	text-decoration: none;
-	list-style: none;
+    margin: 0em 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;   
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    }
+/*........................FORMULARIO............................*/
+section{
+    background: #fff;
+    padding: 0em 0em;
 }
+/*....home.........*/
+.home{
+    background: url(https://www.pixelstalk.net/wp-content/uploads/images1/Lock-Wallpaper-HD-Download-free-768x513.jpg)no-repeat center;
+  min-height: 600px;
+  background-size: cover;
+
+}
+.home div{
+    width: 100%;
+    height: 600px;
+    padding: 7% 0em 0em 0em;
+    background: rgba(0, 0, 0, 0.3);
+}
+.home div h3{
+    width: 60%;
+    margin: 15% 0% 2% 10%;
+    font-size: 3em;
+    color: #44D7A8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.home div p{
+    width: 30%;
+    margin-left: 10% !important;
+    color: #fff;
+    line-height: 1.8em;
+    font-size: 15px;
+    margin: 10px 0px;
+    padding: 0px 0px 0px 10px;
+    display: block;
+}
+.we{
+    color: #44D7A8;
+    margin:0% 0% 0% 11%;
+     font-weight: bold;
+}
+.talk{
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px !important;
+}
+/*.....formulario................*/
 .divMessage{
     width: 34%;
     height: auto;
-    float: left;
-    margin: 2% 33%;
-    padding: 0em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: lightblue;
+    margin: 3% 33%;
+    padding-bottom: 1em;
+    background: #fff;
+    border-radius: .4em;
+    box-shadow:1px 1px 20px 0px rgba(68, 80, 80, 0.3);
 }
 
 input {
@@ -50,31 +98,33 @@ input {
     margin: 5% 20%;
     border-radius: 0.4em;
     outline: none;
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: rgb(68, 215, 168);
+    border: 0.5px solid #44D7A8;
 
 }
-input: hover{
-	box-shadow: 1px 0px 4px 6px #44D7A8;
-}
+
 form h4{
-	padding: 1em 0em;
+    background: #44D7A8;
+    color: #fff;
+    margin: 0em 0em 0.5em;
+    padding: 1em 0em;
     font-size: 1.5em;
     text-align: center;
     box-shadow: rgb(197, 197, 197) 0px 3px 6px 0px;
     border-bottom: 0.5px solid rgb(197, 197, 197);
-    margin: 0em 0em 0.5em;
-    padding: 0.6em 1em;
+
+
+}
+form img{
+    width: 60%;
+    height: 100px;
+    margin:0% 20%;
 }
 .button-acess {
-    width: 100%;
     color: rgb(255, 255, 255);
     text-align: center;
     cursor: pointer;
-    background: rgb(68, 215, 168);
-    padding: 1em 2em;
-    margin: 0em 1em;
+    background: #44D7A8;
+
 }
 h4 {
     display: block;
@@ -82,79 +132,120 @@ h4 {
 }
 .contain-valor {
     margin: 0em 1em;
-    padding: 0em 1em;
+    padding: .5em 1em;
 }
 .contain-valor label {
-    color: red;
-    margin-left: 20%;
+    color: #EC0044;
+    margin-left: 10%;
+    font-weight: bold;
     display: none;
+}
+.aviso{
+    color: rgba(68, 80, 80, 0.6);
+    text-align: center;
+    font-weight: bold;
 }
 textarea, .cipherMessage {
     width: 60%;
     height: 60px;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
     margin: 1% 20%;
+    padding: 1em 0em;
     border-radius: 0.4em;
-    padding: 0em;
     outline: none;
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: #44D7A8;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;        
+    border:0.5px solid #44D7A8;
 }
 .cipherMessage {
-	text-align: center;
+    text-align: center;
 }
 .contain-button {
     margin: 0em 30% 1em;
 }
+.buttonOk{
+    background:#EC0044;
+    color: #fff;
+    cursor: pointer;
+    border:1px solid #EC0044;
+}
+/*...............................FOOTER............................*/
 footer {
-    margin: 22em 0%;
+    background: #fff;
 
 }
 footer div {
     width: 60%;
-    color: rgb(0, 0, 0);
-    margin: 3% 20%;
-    padding: 1em;
-    border-top: 1px solid rgb(0, 0, 0);
+    color: rgba(68, 80, 80, 0.6);
+    margin: 0% 20%;
+    padding: 1em; 
+    border-top: 1px solid rgba(68, 80, 80, 0.3);
 }
 footer div p {
-    width: 64%;
+    width: 50%;
     font-weight: bold;
-    margin: 0% 36%;
+    margin: 0% 25%;
 }
-.contain-valor label {
-    color: red;
-    margin-left: 20%;
+footer div p a{
+    text-decoration: none;
+    list-style: none;
+    color: #ef235e;
+}
+
+#divDescipher{
     display: none;
 }
-#messageDes{
-	display: none;
+#divCipher{
+    display: none;
 }
 /**/
 @media (max-width: 850px){
-	nav ul{
-		display: none;
-	}
-	.divMessage{
+
+    .divMessage{
     width: 50%;
     margin: 2% 25%;
-	}
+    }
     .contain-valor {
     margin: 0em 0em;
     padding: 0em 0em;
-	}	
+    }   
 }
 @media (max-width: 550px){
-
-	.divMessage{
+    nav div{
+    display: none;
+    }
+    .home div h3{
+        font-size: 2em;
+        width: 90%;
+        margin: 10% 0% 2% 10%;
+    }
+    .home div p{
+        width: 80%;
+        margin: 10px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+    .divMessage{
     width: 80%;
-    margin: 2% 10%;	}
+    margin: 2% 10%; 
+    }
+    .contain-button {
+    margin: 0em 20% 1em;
+    }
 
+    footer div{
+        width: 90%;
+        margin:1em 1em;
+        padding: .5em 0em;
+    }
+    footer div p{
+        width: 90%;
+        margin:1% 13%;
+        padding: 1% 0%;
+    }
+}
 @media (max-width: 350px){
 
-	.divMessage{
+    .divMessage{
     width: 94%;
-    margin: 2% 3%;	}
+    margin: 2% 3%;  }
 }

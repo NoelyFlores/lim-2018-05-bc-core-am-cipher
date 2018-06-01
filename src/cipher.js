@@ -1,62 +1,53 @@
 window.cipher = {
-	encode: function(offset, cadena){debugger
-	const sinCifrar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-		let numero1=cadena.length;//conflictos!! tama;o de mi mensaje
-		let numero2=sinCifrar.length;//conflictos!! Numero de letras-27
-		let numeroDesplazamiento=parseInt(offset);// Conflictos!!! parsear
-		let letra=cadena.toUpperCase();
-		let textCifrado="";//inicializando mi variable que ALMACENARA mi cifrado
-		let posicionText;// variable que calcula la pocision nueva de mis caracteres
-		for (let i = 0; i <=numero1 ; i++) {//recorrere por la cantidad de argumentos en mi mensaje	
-			//var obtenerNumero=Math.sign(letra[i]);// (1,-1,0,NaN)
-			if (!isNaN(letra[i])) {// quiero determinar si el argumento es un numero o no! (NaN->true,12->false) NO ES UN NUMERO???
-				textCifrado+=letra[i];
-			};
-			for(let q=0; q<=numero2-1;q++)// Digamos sin cifrar es 27
-				{ 									
-					if(letra[i]!=" "){	// .........si mi letra es un espacio en blanco??..........	
-							if(letra[i]==sinCifrar[q]){// comparo cada argumento de mi mensaje con el Array abecedario
-									posicionCifrado=(q+numeroDesplazamiento)%numero2;
-									textCifrado+=sinCifrar[posicionCifrado];
-							}
-						}else{
-						     textCifrado+=" ";
-						}					
-				}
+	encode: (offset, string)=>{//debugger
+		const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+		let displacement=parseInt(offset);// Conflictos!!! parsear
+		let upperString=string.toUpperCase();
+		let resultEncryption="";//inicializando mi variable que ALMACENARA mi cifrado
+		let positionEncryption;
+		for (let i = 0; i <=string.length ; i++) {//recorrere por la cantidad de argumentos en mi mensaje	
+			if (!isNaN(upperString[i])) {// quiero determinar si el argumento es un numero o no! (NaN->true,12->false) NO ES UN NUMERO???
+				resultEncryption+=upperString[i];
 			}
-		return textCifrado.toString(); 
+			if(upperString[i]==" "){// Si mi letra es un espacio en blanco?
+				resultEncryption+="";
+			}
+			for(let q=0; q<=alphabet.length-1;q++){// Digamos sin cifrar es 27
+				if(upperString[i]==alphabet[q]){// comparo cada argumento de mi mensaje con el Array abecedario
+					positionEncryption=(q+displacement)%alphabet.length;
+					resultEncryption+=alphabet[positionEncryption];
+					}						
+				}
+		}
+		return resultEncryption.toString(); 
 	}, 
-	decode: function(offset, cadena){debugger
-	const sinCifrar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-		let numero1=cadena.length;//conflictos!! tama;o de mi mensaje
-		let numero2=sinCifrar.length;//conflictos!! Numero de letras-27
-		let numeroDesplazamiento=parseInt(offset);// Conflictos!!! parsear
-		let letra=cadena.toUpperCase();
-		let textCifrado="";//inicializando mi variable que ALMACENARA mi cifrado
-		let posicionText;// variable que calcula la pocision nueva de mis caracteres
-		for (let i = 0; i <=numero1 ; i++) {//recorrere por la cantidad de argumentos en mi mensaje	
-			//var obtenerNumero=Math.sign(letra[i]);// (1,-1,0,NaN)
-			if (!isNaN(letra[i])) {// quiero determinar si el argumento es un numero o no! (NaN->true,12->false) NO ES UN NUMERO???
-				textCifrado+=letra[i];
-			};
-			for(let q=0; q<=numero2-1;q++)
-				{ 									
-					if(letra[i]!=" "){	// .........si mi letra es un espacio en blanco??..........	
-							if(letra[i]==sinCifrar[q]){// comparo cada argumento de mi mensaje con el Array abecedario
-								posicionCifrado2=(q-numeroDesplazamiento)%numero2;
-									if(posicionCifrado2<0){
-										textCifrado+=sinCifrar[posicionCifrado2+numero2];
-									}else{
-										textCifrado+=sinCifrar[posicionCifrado2];
-									}
-							
-							}
+	decode: (offset, string)=>{//debugger
+		const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+		let displacement=parseInt(offset);
+		let upperString=string.toUpperCase();
+		let resultEncryption="";
+		let positionEncryption;
+		for (let i = 0; i <=string.length ; i++) {
+			if (!isNaN(upperString[i])) {
+				resultEncryption+=upperString[i];
+			}
+			if(upperString[i]==" "){
+				resultEncryption+="";
+			}
+			for(let q=0; q<=alphabet.length-1;q++){									
+				if(upperString[i]==alphabet[q]){
+					positionEncryption=(q-displacement)%alphabet.length;
+					if(positionEncryption<0){// si mi posicion es negativo sumarlo la cantidad del array
+						resultEncryption+=alphabet[positionEncryption+alphabet.length];
 					}else{
-						textCifrado+=" ";
-					}					
+						resultEncryption+=alphabet[positionEncryption];
+					}
 				}
 			}
-		return textCifrado.toString(); 
-	} 
-};
+		}
+		return resultEncryption.toString(); 
+	}
+	/*createCipherWithOffset: (offset)=>{
 
+	}*/
+};
