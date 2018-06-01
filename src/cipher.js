@@ -2,7 +2,11 @@ window.cipher = {
 	encode: (offset, string)=>{
 		return cipher.hibrido(offset,string,true);
 		}, 
+<<<<<<< HEAD
 	decode: (offset, string)=>{
+=======
+	decode: (offset, string)=>{	
+>>>>>>> d7cad1b03676670a00f33184a3e3fc5fb6080a98
 		return cipher.hibrido(offset,string,false);
 		},
 	createCipherWithOffset: (offset)=>{
@@ -15,6 +19,7 @@ window.cipher = {
 			}
 		}
 		return WihtOffset;
+<<<<<<< HEAD
 	},
 	hibrido: (offSet,string,boolean)=>{
 			const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -42,10 +47,45 @@ window.cipher = {
 							}else{
 								resultEncryption+=alphabet[positionEncryption2];
 							}
+=======
+		},
+
+	hibrido: (offSet,string,boolean)=>{
+		const alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+		let displacement=parseInt(offSet);
+		let upperString=string.toUpperCase();
+		let resultEncryption="";
+		let positionEncryption;
+		let positionEncryption2;
+		for (let i = 0; i <=string.length ; i++) {
+			if (!isNaN(upperString[i])) {
+				resultEncryption+=upperString[i];
+			}
+			if(upperString[i]==" "){
+				resultEncryption+="";
+			}
+			for(let q=0; q<=alphabet.length-1;q++){									
+				if(upperString[i]==alphabet[q]){
+					if(boolean==true){
+						positionEncryption=(q+displacement)%alphabet.length;
+						resultEncryption+=alphabet[positionEncryption];
+					}else{
+						positionEncryption2=(q-displacement)%alphabet.length;
+						if(positionEncryption2<0){
+							resultEncryption+=alphabet[positionEncryption2+alphabet.length];
+						}else{
+							resultEncryption+=alphabet[positionEncryption2];
+>>>>>>> d7cad1b03676670a00f33184a3e3fc5fb6080a98
 						}
 					}
 				}
 			}
 			return resultEncryption.toString(); 
 		}
+<<<<<<< HEAD
 };
+=======
+		return resultEncryption.toString(); 
+	}
+};
+>>>>>>> d7cad1b03676670a00f33184a3e3fc5fb6080a98
