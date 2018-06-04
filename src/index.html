@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-ar">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -10,38 +10,35 @@
     <nav>
       <div>
          <h3>WE</h3><h2>Talk</h2>
-      </div>    
-              
-        <ul>
-            
-            <li id="menuCifrar"><span></span>CIFRAR</li>
-            <li id="menuDescifrar"><span></span>DESCIFRAR</li>
-            <li></li><li id="menuHome"><span></span>AYUDA</li>
+      </div>               
+        <ul>           
+            <li id="menuCifrar">CIFRAR</li>
+            <li id="menuDescifrar">DESCIFRAR</li>
+            <li id="menuHome">AYUDA</li>
         </ul> 
     </nav>
     <section>
       <div class="home" id="home">
         <div class="contenedorHelp">
             <h4>Tus primeros pasos en<label class="we">WE</label><label class="talk">Talk</label></h4>
-            <p>Despreocúpate por recibir ese mensaje que no quieres que nadie más lo lea y 
-              protege tu privacidad e invierte ese tiempo en lo que realmente importa.</p>
-              <div class="pasoUno">
-                <span class="spanPasos">1</span>
-                 <ul>
-                    <li>Una vez que cargue la página podrás visualizar el formulario del cifrado, lo primero que tendrás que hacer es ingresar el número clave que compartirás con la persona que deseas comunicarte.</li>
-                    <li>El siguiente paso es escribir ese mensaje que no quieres que nadie más lo lea.</li>
-                    <li>Al hacer clic en el botón "CIFRAR" podrás enviar el mensaje.</li>
-                    <li>Los campos no aceptan valores vacíos.</li>
-                 </ul>
+            <p>Despreocúpate por recibir ese mensaje que no quieres que nadie más lo lea y protege tu privacidad e invierte ese tiempo en lo que realmente importa.</p>
+            <div class="pasoUno">
+              <span class="spanPasos">1</span>
+                <ul>
+                  <li>Una vez que cargue la página podrás visualizar el formulario del cifrado, lo primero que tendrás que hacer es ingresar el número clave que compartirás con la persona que deseas comunicarte.</li>
+                  <li>El siguiente paso es escribir ese mensaje que no quieres que nadie más lo lea.</li>
+                  <li>Al hacer clic en el botón "CIFRAR" podrás enviar el mensaje.</li>
+                  <li>Los campos no aceptan valores vacíos.</li>
+                </ul>
             </div>
             <div class="pasoDos">
-                <span class="spanPasos">2</span>
-                 <ul>
+              <span class="spanPasos">2</span>
+                <ul>
                     <li>Para descifrar ese mensaje importante ingrese el número clave, asegúrate de que sea el mismo número del cifrado.</li>
                     <li>El siguiente paso es hacer un clic en el botón "DESCIFRAR".</li>
                     <li>El campo "Ingrese número clave" solo valida números.</li>
                     <li>y listo!!</li>
-                 </ul>
+                </ul>
             </div>
         </div>
       </div>
@@ -49,16 +46,15 @@
         <form>
           <h4>Cifrar Mensaje</h4>
           <div class="contain-valor">
-            <img src="https://cdn1.mindmeister.com/assets/meisterlabs/avatars/default_avatar-b43bffa1218b399de437d643f24d91b05a8e8010e0d7e4fd84ec65aaf4fada26.svg">
+            <img src="https://cdn1.mindmeister.com/assets/meisterlabs/avatars/default_avatar-b43bffa1218b399de437d643f24d91b05a8e8010e0d7e4fd84ec65aaf4fada26.svg" alt="usuario">
             <label id="warning">ERROR! No existe clave o mensaje</label>
-            <input type="text" name="" id="offsetNumber" placeholder="INGRESE NÚMERO CLAVE"><br>
+            <input type="text" id="offsetNumber" placeholder="INGRESE NÚMERO CLAVE"><br>
             <textarea id="cipherText" placeholder="ESCRIBA EL MENSAJE"></textarea>
           </div>
           <div class="contain-button">
-            <input type="button" name="" id="buttonCipherText" class="button-acess" value="CIFRAR" >
-          </div>
-          
-      </form>
+            <input type="button" id="buttonCipherText" class="button-acess" value="CIFRAR" >
+          </div>          
+        </form>
       </div>
       <div id="divDescipher" class="divMessage">
         <form>
@@ -67,10 +63,10 @@
             <p class="aviso">Para descifrar el mensaje asegurate de compartir la misma clave del cidrado</p>
             <label id="warning2">ERROR!! Clave vacía o incorrecta</label>
             <input type="text" id="offsetClave" placeholder="INGRESE NÚMERO CLAVE"><br>
-            <p id="cipherMessage" class="cipherMessage" placeholder="MENSAJE"></p>
+            <p id="cipherMessage" class="cipherMessage"></p>
           </div>
           <div class="contain-button">
-            <input type="button" name="" id="buttonDecipherText" class="button-acess" value="DESCIFRAR">
+            <input type="button" id="buttonDecipherText" class="button-acess" value="DESCIFRAR">
             <input type="submit" value="LISTO" class="button-acess" style="background:#EC0044; border-color:#EC0044">
           </div>
         </form>
@@ -78,11 +74,9 @@
     </section>
     <footer>
       <div>
-        <p>© Diseñado por <a target="_blank" href="https://es-la.facebook.com/">Noely Flores </a>- Laboratoria! </p>
+        <p>© Diseñado por <a target="_blank" href="https://es-la.facebook.com/">Noely Flores 2018</a>- Laboratoria! </p>
       </div>
-
-    </footer>
-    
+    </footer>    
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
